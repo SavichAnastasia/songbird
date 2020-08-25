@@ -1,0 +1,12 @@
+@import "~bootswatch/dist/flatly/_variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/flatly/_bootswatch";
+
+
+body {
+  background-color: #272B30;
+
+  #root {
+    padding: 30px 15px;
+  }
+}
