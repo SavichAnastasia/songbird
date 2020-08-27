@@ -1,0 +1,13 @@
+.questionBlock.card {
+  flex-direction: row;
+  align-items: center;
+
+  .card-img, .card-img-top, .card-img-bottom {
+    flex-shrink: initial;
+    width: 30%;
+  }
+
+  .react-audio-player {
+    width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+.gameContainer {
+  padding: 30px 15px;
+  max-width: 1020px;
+
+  &-answer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  button {
+    margin-top: 20px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+.birdCard.card {
+  align-items: center;
+  color: #ffffff;
+  width: 60%;
+
+  .card-header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .birdCard-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .card-img, .card-img-top, .card-img-bottom {
+      flex-shrink: initial;
+      width: 30%;
+    }
+
+    .birdCard-item-wrapper-title {
+      width: 70%;
+      padding: 0 10px;
+
+      .react-audio-player {
+        width: 100%;
+      }
+    }
+  }
+}
