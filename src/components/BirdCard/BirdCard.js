@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import { Card } from 'react-bootstrap';
-import birdsData from '../../birdsData';
 import './style.scss';
 
-export default function BirdCard ({ bird = birdsData[0][0] }) {
-  return (
+export default function BirdCard ({ bird }) {
+  return  bird ? 
+  (
     <Card bg="primary" className="birdCard">
-      <Card.Header>{bird.name}</Card.Header>
       <Card.Body>
         <div className="birdCard-item-wrapper">
-          <Card.Img variant="top" src={bird.image} />
+          <div className="birdCard-item-wrapper-img" style={{backgroundImage: `url(${bird.image})`}} />
           <div className="birdCard-item-wrapper-title">
-            <Card.Title>{bird.species}</Card.Title>
+            <Card.Title>{bird.name}</Card.Title>
+            <Card.Text>{bird.species}</Card.Text>
             <ReactAudioPlayer
               src={bird.audio}
               controls
@@ -21,6 +21,10 @@ export default function BirdCard ({ bird = birdsData[0][0] }) {
         </div>
         <Card.Text>{bird.description}</Card.Text>
       </Card.Body>
+    </Card>
+  ) : (
+    <Card bg="primary" className="birdCard">
+      <Card.Text>Послушайте плеер и выберите птицу из списка.</Card.Text>
     </Card>
   )
 }

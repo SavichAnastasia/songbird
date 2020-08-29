@@ -1,16 +1,31 @@
 .gameContainer {
-  padding: 30px 15px;
-  max-width: 1020px;
+  padding: 15px;
+  max-width: 1200px;
+  width: 100%;
 
   &-answer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    button {
+      box-shadow:
+      inset rgba(0,0,0,.3) -1px -1px 5px,
+      inset rgb(70, 82, 94) 1px 1px 5px,
+      rgba(0,0,0,.5) 1px 1px 5px -3px;
+      border: none;
+    }
   }
 
-  button {
+  &-nextBtn.btn {
     margin-top: 20px;
+    height: 40px;
     width: 100%;
+    box-shadow:
+    inset rgba(0,0,0,.3) -1px -1px 5px,
+    inset rgb(99, 121, 117) 1px 1px 5px,
+    rgba(0,0,0,.5) 1px 1px 5px -3px;
+    border: none;
   }
 }

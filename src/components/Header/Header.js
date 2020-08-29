@@ -3,7 +3,7 @@ import { Pagination } from 'react-bootstrap';
 import { categories } from '../../constants';
 import './style.scss';
 
-export default function Header ({ activeItem = categories[0], score = 0}) {
+export default function Header ({ category, score }) {
   return (
     <header>
       <div className="title">
@@ -11,7 +11,11 @@ export default function Header ({ activeItem = categories[0], score = 0}) {
         <h4>Score: {score}</h4>
       </div>
       <Pagination>
-        { categories.map( item => <Pagination.Item className={activeItem === item ? 'active' : ''} key={item}>{item}</Pagination.Item>) }
+        { categories.map(item => <Pagination.Item 
+          className={categories[category] === item ? 'active' : ''} 
+          key={item}>
+            {item}
+          </Pagination.Item>) }
       </Pagination>
     </header>
   )
