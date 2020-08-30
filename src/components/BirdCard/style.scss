@@ -1,0 +1,106 @@
+.birdCard.card {
+  align-items: center;
+  color: #ffffff;
+  width: 70%;
+  min-height: 273px;
+  overflow: hidden;
+  padding-top: 10px;
+
+  .card-body { 
+    padding: .5rem 1rem;
+
+    .birdCard-item-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media(max-width: 497px) {
+        flex-direction: column;
+
+        .rhap_volume-controls {
+          display: none;
+        }
+      }
+  
+      &-img {
+        width: 25%;
+        padding-bottom: 20%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1.5rem;
+
+        @media(max-width: 497px) {
+          width: 40%;
+          padding-bottom: 35%;
+          margin: 10px;
+        }
+      }
+  
+      &-title {
+        width: 70%;
+        padding: 0 10px;
+        margin-bottom: 0;
+
+        .card-title {
+          margin-bottom: 0;
+        }
+
+        @media(max-width: 497px) {
+          width: 100%;
+        }
+      }
+
+        .card-text {
+          margin-bottom: .5rem;
+        }
+  
+        .rhap_container {
+          background-color: #2C3E50;
+          outline: none;
+          box-shadow: none;
+          color: white;
+          padding: 6px 0px;
+      
+          .rhap_current-time {
+            transform: translate(150%, 100%);
+            color: white;
+          }
+      
+          .rhap_total-time {
+            color: white;
+          }
+      
+          .rhap_additional-controls, .rhap_rewind-button, .rhap_forward-button {
+            display: none;
+          }
+      
+          .rhap_play-pause-button {
+            transform: translateY(-100%);
+            color: #DDDDDD;
+          }
+      
+          .rhap_progress-filled, .rhap_progress-indicator, .rhap_volume-indicator {
+            background-color: #18BC9C;
+          }
+      
+          .rhap_volume-button {
+            color: #18BC9C;
+          }
+        }
+      }
+  
+    .card-text {
+      padding-top: 10px;
+      font-size: 16px;
+    }
+  }
+
+  @media(max-width: 767px) {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+}

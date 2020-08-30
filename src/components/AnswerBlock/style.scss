@@ -1,0 +1,26 @@
+.btn-group-vertical {
+  width: calc(30% - 15px);
+
+  button {
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  span {
+    margin: 0 10px;
+    color: #1A252F;
+
+    &.red {
+      color: rgb(143, 25, 25);
+    }
+  
+    &.green {
+      color: #18BC9C;
+    }
+  }
+
+  @media(max-width: 767px) {
+    width: 100%;
+  }
+}

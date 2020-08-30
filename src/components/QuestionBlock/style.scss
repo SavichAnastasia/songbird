@@ -1,0 +1,73 @@
+.card.questionBlock {
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+
+  .questionBlock-img {
+    width: 19%;
+    padding-bottom: 16%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+    margin: 7px;
+
+    @media(max-width: 767px) {
+      width: 30%;
+      padding-bottom: 28%;
+    }
+
+    @media(max-width: 497px) {
+      width: 40%;
+      padding-bottom: 35%;
+    }
+  }
+
+  .rhap_container {
+    background-color: #18BC9C;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    padding: 10px 0px;
+
+    .rhap_current-time {
+      transform: translate(150%, 100%);
+      color: white;
+    }
+
+    .rhap_total-time {
+      color: white;
+    }
+
+    .rhap_additional-controls, .rhap_rewind-button, .rhap_forward-button {
+      display: none;
+    }
+
+    .rhap_play-pause-button {
+      transform: translateY(-100%);
+      color: #DDDDDD;
+    }
+
+    .rhap_progress-filled, .rhap_progress-indicator, .rhap_volume-indicator {
+      background-color: #2C3E50;
+    }
+
+    .rhap_volume-button {
+      color: #2C3E50;
+    }
+  }
+
+  @media(max-width: 497px) {
+    flex-direction: column;
+    text-align: center;
+
+    .rhap_volume-controls {
+      display: none;
+    }
+
+    .card-body {
+      width: 100%;
+    }
+  }
+}

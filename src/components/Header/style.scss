@@ -1,0 +1,36 @@
+header {
+  color: red;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      color: #0F7864;
+    }
+  
+    h4 {
+      color: #88f1e9;
+    }
+  }
+
+  .pagination {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #18BC9C;
+
+    .page-item {
+      flex: 1 1 auto;
+
+      .page-link {
+        border-radius: 0px;
+        text-align: center;
+        cursor: default;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+}
