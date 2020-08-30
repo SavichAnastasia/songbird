@@ -13,4 +13,8 @@
       color: #18BC9C;
     }
   }
+
+  @media(max-width: 767px) {
+    width: 100%;
+  }
 }

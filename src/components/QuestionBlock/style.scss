@@ -54,6 +54,10 @@
   @media(max-width: 497px) {
     flex-direction: column;
 
+    .rhap_volume-controls {
+      display: none;
+    }
+
     .card-body {
       width: 100%;
     }

@@ -4,6 +4,7 @@
   width: 70%;
   height: 280px;
   overflow: hidden;
+  padding-top: 10px;
 
   .card-body { 
     padding: .5rem 1rem;
@@ -12,6 +13,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media(max-width: 497px) {
+        flex-direction: column;
+
+        .rhap_volume-controls {
+          display: none;
+        }
+      }
   
       &-img {
         width: 25%;
@@ -20,11 +29,23 @@
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 1.5rem;
+
+        @media(max-width: 497px) {
+          width: 40%;
+          padding-bottom: 35%;
+          margin: 10px;
+        }
       }
   
-      .birdCard-item-wrapper-title {
+      &-title {
         width: 70%;
         padding: 0 10px;
+        margin-bottom: 0.5rem;
+
+        @media(max-width: 497px) {
+          width: 100%;
+        }
+      }
 
         .card-text {
           margin-bottom: .5rem;
@@ -64,12 +85,17 @@
           }
         }
       }
-    }
   
     .card-text {
       padding-top: 10px;
       font-size: 16px;
     }
-    
+  }
+
+  @media(max-width: 767px) {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin-top: 10px;
   }
 }
