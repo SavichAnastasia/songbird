@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ButtonGroup, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import birdsData from '../../birdsData';
 import './style.scss';
 
-export default function AnswerBlock ({ category, setAnswer, bird, isCorrect }) {
+function AnswerBlock ({ category, setAnswer, bird, isCorrect }) {
   const [answers, setAnswers] = useState(null);
 
   useEffect(() => {
@@ -33,3 +34,12 @@ export default function AnswerBlock ({ category, setAnswer, bird, isCorrect }) {
     </ButtonGroup>
   )
 }
+
+AnswerBlock.propTypes = {
+  category: PropTypes.number,
+  setAnswer: PropTypes.func.isRequired,
+  isCorrect: PropTypes.bool.isRequired,
+  bird: PropTypes.object
+};
+
+export default AnswerBlock;

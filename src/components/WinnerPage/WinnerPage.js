@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import './style.scss';
 
-export default function WinerPage ({ score, reset }) {
+function WinnerPage ({ score, reset }) {
   useEffect(() => {
     const audio = new Audio();
     audio.src = 'src/assets/audio/success.mp3';
@@ -24,3 +25,10 @@ export default function WinerPage ({ score, reset }) {
     </div>
   )
 }
+
+WinnerPage.propTypes = {
+  score: PropTypes.number.isRequired,
+  reset: PropTypes.func.isRequired,
+};
+
+export default React.memo(WinnerPage);

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Pagination } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import { categories } from '../../constants';
 import './style.scss';
 
-export default function Header ({ category, score }) {
+function Header ({ category, score }) {
   return (
     <header>
       <div className="title">
@@ -20,3 +21,10 @@ export default function Header ({ category, score }) {
     </header>
   )
 }
+
+Header.propTypes = {
+  category: PropTypes.number,
+  score: PropTypes.number.isRequired
+};
+
+export default React.memo(Header);

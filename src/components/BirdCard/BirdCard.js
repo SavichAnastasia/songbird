@@ -1,10 +1,11 @@
 import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
+import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import 'react-h5-audio-player/src/styles.scss'
 import './style.scss';
 
-export default function BirdCard ({ bird, isCorrect }) {
+function BirdCard ({ bird }) {
   return  bird ? 
   (
     <Card bg="primary" className="birdCard">
@@ -30,3 +31,9 @@ export default function BirdCard ({ bird, isCorrect }) {
     </Card>
   )
 }
+
+BirdCard.propTypes = {
+  bird: PropTypes.object
+};
+
+export default React.memo(BirdCard);

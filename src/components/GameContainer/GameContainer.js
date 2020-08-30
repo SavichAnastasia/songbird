@@ -59,11 +59,9 @@ export default function GameContainer () {
     dispatch({type: actionTypes.setAnswer, data: e.target.value});
     if (+e.target.value === state.bird.id) {
       dispatch({type: actionTypes.setIsCorrect, data: true});
-      console.log(state.attempts)
       dispatch({type: actionTypes.setScore, data: state.score + 5 - state.attempts});
     } else {
       dispatch({type: actionTypes.setAttempts, data: state.attempts + 1});
-      console.log(state.attempts)
     }
   }
 
@@ -82,21 +80,25 @@ export default function GameContainer () {
     dispatch({type: actionTypes.setScore, data: 0})
   }
 
-  return state.isGameOver ? 
-      <WinnerPage score={state.score} reset={resetGame}/>
-      : (
+  return (
       <div className="gameContainer">
         <Header category={state.category} score={state.score} />
-        <QuestionBlock bird={state.bird} isCorrect={state.isCorrect} />
-        <div className="gameContainer-answer">
-          <AnswerBlock category={state.category} bird={state.bird} setAnswer={setAnswer} isCorrect={state.isCorrect}/>
-          <BirdCard bird={state.answer} isCorrect={state.isCorrect} />
-        </div>
-        <Button variant={state.isCorrect ? "success" : "primary"} 
-          className="gameContainer-nextBtn" 
-          onClick={changeCategory}>
-            Next
-          </Button>
+        {state.isGameOver ? 
+      <WinnerPage score={state.score} reset={resetGame}/>
+      : (
+        <>
+          <QuestionBlock bird={state.bird} isCorrect={state.isCorrect} />
+          <div className="gameContainer-answer">
+            <AnswerBlock category={state.category} bird={state.bird} setAnswer={setAnswer} isCorrect={state.isCorrect}/>
+            <BirdCard bird={state.answer} isCorrect={state.isCorrect} />
+          </div>
+          <Button variant={state.isCorrect ? "success" : "primary"} 
+            className="gameContainer-nextBtn" 
+            onClick={changeCategory}>
+              Next
+            </Button>
+          </>
+        )}
       </div>
-      )
+  )
 }

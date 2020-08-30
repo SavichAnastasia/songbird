@@ -2,7 +2,7 @@
   align-items: center;
   color: #ffffff;
   width: 70%;
-  height: 280px;
+  min-height: 273px;
   overflow: hidden;
   padding-top: 10px;
 
@@ -40,7 +40,11 @@
       &-title {
         width: 70%;
         padding: 0 10px;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
+
+        .card-title {
+          margin-bottom: 0;
+        }
 
         @media(max-width: 497px) {
           width: 100%;
@@ -56,7 +60,7 @@
           outline: none;
           box-shadow: none;
           color: white;
-          padding: 10px 0px;
+          padding: 6px 0px;
       
           .rhap_current-time {
             transform: translate(150%, 100%);
@@ -96,6 +100,7 @@
     width: 100%;
     height: auto;
     min-height: 100px;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 10px;
   }
 }
