@@ -1,9 +1,10 @@
 import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
 import { Card } from 'react-bootstrap';
+import 'react-h5-audio-player/src/styles.scss'
 import './style.scss';
 
-export default function BirdCard ({ bird }) {
+export default function BirdCard ({ bird, isCorrect }) {
   return  bird ? 
   (
     <Card bg="primary" className="birdCard">
@@ -13,9 +14,10 @@ export default function BirdCard ({ bird }) {
           <div className="birdCard-item-wrapper-title">
             <Card.Title>{bird.name}</Card.Title>
             <Card.Text>{bird.species}</Card.Text>
-            <ReactAudioPlayer
+            <AudioPlayer
               src={bird.audio}
               controls
+              onAbort={(e) => e.target.pause()}
             />
           </div>
         </div>

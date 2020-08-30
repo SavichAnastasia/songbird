@@ -1,3 +1,16 @@
 .btn-group-vertical {
   width: calc(30% - 15px);
+
+  span {
+    margin: 0 5px;
+    color: #1A252F;
+
+    &.red {
+      color: rgb(143, 25, 25);
+    }
+  
+    &.green {
+      color: #18BC9C;
+    }
+  }
 }

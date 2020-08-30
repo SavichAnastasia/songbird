@@ -16,6 +16,10 @@
       rgba(0,0,0,.5) 1px 1px 5px -3px;
       border: none;
     }
+
+    @media(max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
   &-nextBtn.btn {

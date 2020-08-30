@@ -10,10 +10,52 @@
     background-repeat: no-repeat;
     border-radius: 1.5rem;
     margin: 7px;
+
+    @media(max-width: 497px) {
+      width: 40%;
+      padding-bottom: 35%;
+    }
   }
 
-  .react-audio-player {
-    width: 100%;
+  .rhap_container {
+    background-color: #18BC9C;
     outline: none;
+    box-shadow: none;
+    color: white;
+    padding: 10px 0px;
+
+    .rhap_current-time {
+      transform: translate(150%, 100%);
+      color: white;
+    }
+
+    .rhap_total-time {
+      color: white;
+    }
+
+    .rhap_additional-controls, .rhap_rewind-button, .rhap_forward-button {
+      display: none;
+    }
+
+    .rhap_play-pause-button {
+      transform: translateY(-100%);
+      color: #DDDDDD;
+    }
+
+    .rhap_progress-filled, .rhap_progress-indicator, .rhap_volume-indicator {
+      background-color: #2C3E50;
+    }
+
+    .rhap_volume-button {
+      color: #2C3E50;
+    }
+  }
+
+  @media(max-width: 497px) {
+    flex-direction: column;
+
+    .card-body {
+      width: 100%;
+    }
   }
 }
